@@ -17,5 +17,7 @@ public class Book extends MediaItem {
     @Override
     public void displayInfo() {
     	// your code goes here
+        super.displayInfo();
+        System.out.println(getTitle() + "\t" + getYear() + "\t" + getAuthor());
     }
 }

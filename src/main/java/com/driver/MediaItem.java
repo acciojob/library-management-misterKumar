@@ -22,5 +22,6 @@ public class MediaItem {
 
     public void displayInfo() {
     	// your code goes here
+//        System.out.println("Title: " + title + "\tYear: " + year);
     }
 }

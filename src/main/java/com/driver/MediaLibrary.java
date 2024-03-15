@@ -7,10 +7,12 @@ public class MediaLibrary {
 
     public MediaLibrary() {
     	// your code goes here
+        mediaItems=new ArrayList<>();
     }
 
     public void addMediaItem(MediaItem item) {
     	// your code goes here
+        mediaItems.add(item);
     }
 
     public int getMediaItems(){
@@ -19,6 +21,15 @@ public class MediaLibrary {
     }
     public void displayMediaItems() {
     	// your code goes here
+        if (mediaItems.isEmpty()) {
+            System.out.println("No media items to display.");
+        } else {
+            System.out.println("Media items in the library:");
+            System.out.println("Title\tYear\tAuthor/Director/Artist");
+            for (MediaItem item : mediaItems) {
+                item.displayInfo();
+            }
+        }
     }
 
     public static void main(String[] args) {
